@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Senator Nya D. Twayen, Jr. | Nimba County | Official Website</title>
+    <!-- Google Fonts + Tailwind + Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom overrides for glass + rich animations & Liberia colors -->
+    <style>
+        /* tailwind directives simulation + custom advanced glass */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at 10% 20%, rgba(10, 20, 35, 0.9), rgba(2, 8, 23, 0.95));
+            color: #f0f4fa;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* animated bg with subtle flag flow (red, white, blue accents) */
+        .bg-flag-aura {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(125deg, #0a1a2f 0%, #04122b 45%, #80000030 70%, #00286830 100%);
+        }
+
+        .bg-flag-aura::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle, rgba(191, 13, 62, 0.08) 0%, rgba(0, 40, 104, 0.12) 60%, transparent 80%);
+            animation: slowDrift 28s infinite alternate;
+        }
+
+        @keyframes slowDrift {
+            0% { transform: translate(0%, 0%) rotate(0deg); }
+            100% { transform: translate(-5%, -8%) rotate(2deg); }
+        }
+
+        /* Glassmorphism master classes */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 70, 85, 0.4);
+            box-shadow: 0 25px 45px -12px rgba(220, 20, 60, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-nav {
+            background: rgba(5, 15, 35, 0.55);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 0 0 2rem 2rem;
+        }
+
+        .btn-lib {
+            background: linear-gradient(95deg, #BF0D3E, #002868);
+            border: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-lib:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px -8px rgba(191, 13, 62, 0.5);
+            background: linear-gradient(95deg, #d41248, #00337e);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFF, #BF0D3E, #FFD966);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .text-gold-white {
+            color: #F9F6EE;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #BF0D3E;
+            transition: 0.25s ease;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .section-title {
+            border-left: 5px solid #BF0D3E;
+            padding-left: 1rem;
+            font-weight: 700;
+        }
+
+        /* image frame with elegant border */
+        .senator-frame {
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
+            border: 2px solid rgba(255,215,0,0.3);
+            transition: all 0.4s;
+        }
+
+        .senator-frame:hover {
+            transform: scale(1.01);
+            border-color: #BF0D3E;
+        }
+
+        /* responsive fixes */
+        @media (max-width: 1024px) {
+            .glass-nav .flex-wrap {
+                justify-content: center;
+            }
+        }
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(25px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+        }
+        .hero-grid {
+            animation-delay: 0.1s;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a1428;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #BF0D3E;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="bg-flag-aura"></div>
+
+    <!-- Navigation Bar - glass effect with red, white & blue accent -->
+    <header class="glass-nav fixed top-0 left-0 w-full z-50 px-5 md:px-12 py-3 transition-all">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <!-- left section: senator image + republic + name -->
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center shadow-md">
+                    <!-- senator placeholder image with liberia flag nuance, replace later with actual senator image -->
+                    <img src="https://placehold.co/400x400/1E2A47/white?text=Senator+Nya" alt="Senator Nya D. Twayen, Jr" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <div class="text-sm md:text-base font-semibold tracking-wide text-white/90">Republic of Liberia</div>
+                    <div class="text-sm md:text-lg font-bold leading-tight text-white">Senator Nya D. Twayen, Jr</div>
+                    <div class="text-xs text-red-300 font-medium">Nimba County • 55th Legislature</div>
+                </div>
+            </div>
+
+            <!-- Desktop navigation links (with highlight Home and Request Service bigger) -->
+            <div class="hidden lg:flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
+                <a href="#" class="nav-link active text-white">Home</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">About</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">Legislative Work</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">Projects</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">Foundation</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">News</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">Gallery</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">Contact</a>
+                <a href="#" class="bg-red-700/60 hover:bg-red-700 px-4 py-2 rounded-full text-white font-bold text-base shadow-lg transition-all ml-1 border border-white/20">Request Service</a>
+            </div>
+
+            <!-- Mobile menu button (simple responsive) + minimal dropdown actually would be extended, keeping functional design -->
+            <div class="lg:hidden">
+                <button id="mobileMenuBtn" class="text-white text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- mobile dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 w-full glass-card rounded-b-2xl mt-1 p-4 flex flex-col gap-3 z-40">
+            <a href="#" class="nav-link text-white py-1">Home</a><a href="#" class="nav-link text-white/80">About</a><a href="#" class="nav-link text-white/80">Legislative Work</a><a href="#" class="nav-link text-white/80">Projects</a><a href="#" class="nav-link text-white/80">Foundation</a><a href="#" class="nav-link text-white/80">News</a><a href="#" class="nav-link text-white/80">Gallery</a><a href="#" class="nav-link text-white/80">Contact</a><a href="#" class="bg-red-700 text-center py-2 rounded-full font-bold mt-1">Request Service</a>
+        </div>
+    </header>
+
+    <main class="pt-32 md:pt-36 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+        <!-- HERO SECTION: Home default -->
+        <div class="animate-fade-up">
+            <!-- Senator Title / Intro -->
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm text-red-200 text-sm font-medium mb-3 border border-white/20">Nimba County • 55th Legislature</div>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight"><span class="bg-gradient-to-r from-white via-red-300 to-blue-300 bg-clip-text text-transparent">Serving Nimba</span><br><span class="text-3xl md:text-5xl font-bold text-white">Building Liberia</span></h1>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-200 text-base md:text-lg font-light">The official website of Honorable Senator Nya D. Twayen, Jr – a tireless advocate for the people of Nimba County, championing humanitarian welfare, rural development, education, healthcare and economic empowerment across the Republic of Liberia.</p>
+                <div class="flex flex-wrap gap-4 justify-center mt-8">
+                    <a href="#" class="btn-lib px-6 py-3 rounded-full text-white font-semibold flex items-center gap-2"><i class="fas fa-user-check"></i> Meet the Senator</a>
+                    <a href="#" class="bg-white/10 backdrop-blur-sm border border-white/30 px-6 py-3 rounded-full text-white font-semibold hover:bg-white/20 transition"><i class="fas fa-phone-alt"></i> Contact the Office</a>
+                </div>
+            </div>
+
+            <!-- Stats cards: 17 Districts, 50+ Projects, 100K+ Lives -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 my-16">
+                <div class="glass-card p-6 text-center transform transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-map-marked-alt text-4xl text-red-400 mb-3"></i>
+                    <div class="stat-number text-5xl">17</div>
+                    <div class="font-bold text-lg mt-1 text-white">Districts Served</div>
+                    <div class="text-xs text-gray-300 mt-1">Across Nimba County</div>
+                </div>
+                <div class="glass-card p-6 text-center transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-hands-helping text-4xl text-blue-300 mb-3"></i>
+                    <div class="stat-number text-5xl">50+</div>
+                    <div class="font-bold text-lg mt-1 text-white">Community Projects</div>
+                    <div class="text-xs text-gray-300">Empowering grassroots</div>
+                </div>
+                <div class="glass-card p-6 text-center transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-heartbeat text-4xl text-red-400 mb-3"></i>
+                    <div class="stat-number text-5xl">100K+</div>
+                    <div class="font-bold text-lg mt-1 text-white">Lives Impacted</div>
+                    <div class="text-xs text-gray-300">Direct humanitarian reach</div>
+                </div>
+            </div>
+
+            <!-- Big Senator Image with name frame -->
+            <div class="glass-card p-5 md:p-8 my-12 flex flex-col md:flex-row gap-10 items-center justify-center">
+                <div class="flex-shrink-0 w-full md:w-2/5">
+                    <div class="relative">
+                        <img src="https://placehold.co/800x900/142c3c/white?text=Senator+Nya+D.+Twayen+Jr" alt="Honorable Senator Nya D. Twayen, Jr" class="senator-frame w-full object-cover rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-black/70 backdrop-blur-md px-6 py-2 rounded-full border border-red-500/50 whitespace-nowrap text-sm md:text-base font-bold text-white">Honorable Nya D. Twayen, Jr <span class="text-red-300">| Senator, Nimba County</span></div>
+                    </div>
+                </div>
+                <div class="flex-1 text-center md:text-left space-y-5">
+                    <h2 class="text-3xl md:text-4xl font-bold flex flex-col"><span class="text-red-400">A voice for Nimba</span><span class="text-white">A Servant of the People</span></h2>
+                    <p class="text-gray-200 leading-relaxed">Honorable Senator Nya D. Twayen, Jr. serves the people of Nimba county in the Liberian Senate with dedication, integrity and a deep commitment to grassroots development. A son of the soil with strong roots in his community, the senator has devoted his career to advancing the welfare of every citizen – from the rural farmer in Saclepea to entrepreneur in Sanniquellie and students across the region.</p>
+                    <p class="text-gray-300">Through legislative advocacy, humanitarian programs and the work of the Nya D. Twayen Foundation, he is building a more inclusive, prosperous and dignified future for all Nimbaians and Liberians.</p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+                        <div class="flex items-center gap-2 bg-white/10 rounded-2xl px-4 py-2 backdrop-blur"><i class="fas fa-gavel text-red-400"></i><span class="text-sm">Senator • Liberian Senate</span></div>
+                        <div class="flex items-center gap-2 bg-white/10 rounded-2xl px-4 py-2 backdrop-blur"><i class="fas fa-hand-holding-heart text-blue-300"></i><span class="text-sm">Foundation Chair</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info grid: Policy Focus / Public service + additional card section similar to design brief -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
+                <div class="glass-card p-6 text-center group">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-red-900/40 flex items-center justify-center mb-4 border border-red-500/30"><i class="fas fa-university text-3xl text-white"></i></div>
+                    <h3 class="text-xl font-bold">Senator</h3>
+                    <p class="text-white/70">Liberian Senate<br>Nimba County</p>
+                </div>
+                <div class="glass-card p-6 text-center group">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-blue-900/40 flex items-center justify-center mb-4 border border-blue-400/30"><i class="fas fa-tree text-3xl text-white"></i></div>
+                    <h3 class="text-xl font-bold">Foundation Chair</h3>
+                    <p class="text-white/70">Nya D. Twayen Foundation<br>Humanity First</p>
+                </div>
+                <div class="glass-card p-6 text-center group">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-white/20 flex items-center justify-center mb-4"><i class="fas fa-graduation-cap text-3xl text-red-300"></i></div>
+                    <h3 class="text-xl font-bold">Policy Focus</h3>
+                    <p class="text-white/70">Education, Health &<br>Rural Development</p>
+                </div>
+                <div class="glass-card p-6 text-center md:col-span-3 lg:col-span-1 group">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-white/20 flex items-center justify-center mb-4"><i class="fas fa-briefcase text-3xl text-blue-300"></i></div>
+                    <h3 class="text-xl font-bold">Public Service</h3>
+                    <p class="text-white/70">20+ years of community work, advocacy & legislative leadership</p>
+                </div>
+            </div>
+
+            <!-- Additional Section to align with Senator focus: Highlights on Projects and Foundation preview -->
+            <div class="my-16 grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-6 flex flex-col">
+                    <i class="fas fa-chalkboard-teacher text-4xl text-red-400 mb-3"></i>
+                    <h3 class="text-2xl font-bold mb-2">Legislative Milestones</h3>
+                    <p class="text-gray-200">Sponsored bills for rural electrification, youth agricultural empowerment, and free primary healthcare for elders in Nimba. A champion for decentralized development.</p>
+                    <div class="mt-4 flex gap-2 flex-wrap"><span class="bg-white/10 text-xs px-3 py-1 rounded-full">Education Reform</span><span class="bg-white/10 text-xs px-3 py-1 rounded-full">Road Infrastructure</span><span class="bg-white/10 text-xs px-3 py-1 rounded-full">Women's Economic Inclusion</span></div>
+                </div>
+                <div class="glass-card p-6 flex flex-col">
+                    <i class="fas fa-seedling text-4xl text-blue-300 mb-3"></i>
+                    <h3 class="text-2xl font-bold mb-2">Nya D. Twayen Foundation</h3>
+                    <p class="text-gray-200">Providing scholarships, healthcare outreach, and small business grants. The foundation has empowered over 5,000 households across Nimba's 17 districts and continues its mission.</p>
+                    <a href="#" class="mt-4 text-red-300 hover:text-white transition flex items-center gap-2">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- additional card to showcase latest news/home feel - connecting the image from brief -->
+            <div class="glass-card p-6 flex flex-wrap gap-6 justify-between items-center mt-6">
+                <div class="flex items-center gap-4">
+                    <img src="https://placehold.co/120x120/003366/white?text=Liberia+Flag" class="w-16 h-16 rounded-full object-cover border-2 border-white" alt="Flag pride">
+                    <div><p class="font-semibold">"One Nimba, One Future"</p><p class="text-sm text-gray-300">Senator Twayen's message of unity and progress resonates across the county.</p></div>
+                </div>
+                <div class="text-right">
+                    <span class="bg-red-800/50 px-4 py-2 rounded-full text-sm">Upcoming Townhall: Sanniquellie – Dec 12</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer with elegant glass & liberia colors -->
+    <footer class="glass-card rounded-t-3xl mt-10 py-8 px-5 mx-4 md:mx-8 border-t border-white/20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-red-700 flex items-center justify-center text-white font-bold">NT</div>
+                <div class="text-sm">© 2025 Office of Senator Nya D. Twayen, Jr. <br> Republic of Liberia – Nimba County</div>
+            </div>
+            <div class="flex gap-6 text-gray-300">
+                <a href="#" class="hover:text-red-400 transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="hover:text-red-400 transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-red-400 transition"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <div class="text-xs text-white/50">Designed with glass & purpose | Building a better Liberia</div>
+        </div>
+    </footer>
+
+    <script>
+        // mobile toggle
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if(mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        // active nav highlight simulation (simple, no routing)
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') e.preventDefault();
+                navLinks.forEach(l => l.classList.remove('active', 'text-white'));
+                navLinks.forEach(l => l.classList.add('text-white/80'));
+                this.classList.add('active', 'text-white');
+                if(this.innerText.trim() !== 'Home') {
+                    // visual feedback, just staying on same page but Home remains active? we keep as requested but home page always content.
+                }
+                if(this.innerText.trim() === 'Home') {
+                    window.scrollTo({top:0, behavior:'smooth'});
+                }
+            });
+        });
+        // make first Home active on load
+        const homeLink = Array.from(navLinks).find(l => l.innerText.trim() === 'Home');
+        if(homeLink) {
+            homeLink.classList.add('active', 'text-white');
+        }
+    </script>
+</body>
+</html>
