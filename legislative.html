@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Legislative Work | Senator Nya D. Twayen, Jr. | Nimba County</title>
+    <!-- Google Fonts + Tailwind + Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at 10% 20%, rgba(10,20,35,0.9), rgba(2,8,23,0.95)); color: #f0f4fa; overflow-x: hidden; scroll-behavior: smooth; }
+        .bg-flag-aura { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; background: linear-gradient(125deg, #0a1a2f 0%, #04122b 45%, #80000030 70%, #00286830 100%); }
+        .bg-flag-aura::before { content: ""; position: absolute; width: 200%; height: 200%; top: -50%; left: -50%; background: radial-gradient(circle, rgba(191,13,62,0.08) 0%, rgba(0,40,104,0.12) 60%, transparent 80%); animation: slowDrift 28s infinite alternate; }
+        @keyframes slowDrift { 0% { transform: translate(0%,0%) rotate(0deg); } 100% { transform: translate(-5%,-8%) rotate(2deg); } }
+        .glass-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.15); border-radius: 2rem; box-shadow: 0 20px 40px -12px rgba(0,0,0,0.4); transition: all 0.3s ease; }
+        .glass-card:hover { border-color: rgba(255,70,85,0.4); box-shadow: 0 25px 45px -12px rgba(220,20,60,0.2); background: rgba(255,255,255,0.08); }
+        .glass-nav { background: rgba(5,15,35,0.55); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(255,255,255,0.12); border-radius: 0 0 2rem 2rem; position: fixed; top: 0; left: 0; width: 100%; z-index: 50; padding: 0.75rem 2rem; }
+        .btn-lib { background: linear-gradient(95deg, #BF0D3E, #002868); transition: transform 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.2); display: inline-block; }
+        .btn-lib:hover { transform: translateY(-3px); }
+        .btn-chief { background: linear-gradient(95deg, #1E3A6F, #0F2B4F); border: 1px solid rgba(255,215,0,0.4); transition: transform 0.2s; }
+        .btn-chief:hover { transform: translateY(-3px); background: linear-gradient(95deg, #2A4A8A, #1A3A6A); border-color: rgba(255,215,0,0.7); }
+        .stat-number-lg { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, #FFF, #BF0D3E, #FFD966); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .nav-link { position: relative; font-weight: 500; transition: 0.2s; text-decoration: none; color: rgba(255,255,255,0.8); }
+        .nav-link:hover { color: white; }
+        .nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0%; height: 2px; background: #BF0D3E; transition: 0.25s ease; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link.active { color: white; }
+        .circle-image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+        .senator-logo { object-position: center 25%; }
+        @keyframes fadeUp { 0% { opacity: 0; transform: translateY(25px); } 100% { opacity: 1; transform: translateY(0); } }
+        .animate-fade-up { animation: fadeUp 0.7s cubic-bezier(0.2,0.9,0.4,1.1) forwards; }
+        main { padding-top: 100px; }
+        .status-passed { background: rgba(34,197,94,0.2); border-left: 4px solid #22c55e; }
+        .status-committee { background: rgba(245,158,11,0.2); border-left: 4px solid #f59e0b; }
+        .status-sponsored { background: rgba(59,130,246,0.2); border-left: 4px solid #3b82f6; }
+        .committee-tag { background: rgba(255,255,255,0.1); border-radius: 9999px; padding: 0.25rem 1rem; font-size: 0.75rem; }
+        @media (max-width: 1024px) { .glass-nav .flex-wrap { justify-content: center; } main { padding-top: 120px; } }
+    </style>
+</head>
+<body>
+    <div class="bg-flag-aura"></div>
+
+    <!-- GLASS NAVIGATION -->
+    <header class="glass-nav">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white/30 bg-white/10 shadow-md">
+                    <img src="images/senator-main.jpg" alt="Senator" class="circle-image senator-logo">
+                </div>
+                <div>
+                    <div class="text-sm md:text-base font-semibold text-white/90">Republic of Liberia</div>
+                    <div class="text-sm md:text-lg font-bold text-white">Senator Nya D. Twayen, Jr</div>
+                    <div class="text-xs text-red-300">Nimba County • 55th Legislature</div>
+                </div>
+            </div>
+            <div class="hidden lg:flex flex-wrap items-center gap-x-4 text-sm font-medium">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="legislative.html" class="nav-link active">Legislative Work</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="foundation.html" class="nav-link">Foundation</a>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="request-service.html" class="bg-red-700/60 hover:bg-red-700 px-4 py-2 rounded-full text-white font-bold transition">Request Service</a>
+                <a href="chief-office.html" class="btn-chief px-4 py-2 rounded-full text-white font-bold transition">Chief of Office Staff</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobileMenuBtn" class="text-white text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 w-full glass-card rounded-b-2xl mt-1 p-4 flex flex-col gap-3 z-40">
+            <a href="index.html" class="text-white py-1 hover:text-red-300 transition">Home</a>
+            <a href="about.html" class="text-white/80 py-1 hover:text-red-300 transition">About</a>
+            <a href="legislative.html" class="text-white py-1 hover:text-red-300 transition">Legislative Work</a>
+            <a href="projects.html" class="text-white/80 py-1 hover:text-red-300 transition">Projects</a>
+            <a href="foundation.html" class="text-white/80 py-1 hover:text-red-300 transition">Foundation</a>
+            <a href="news.html" class="text-white/80 py-1 hover:text-red-300 transition">News</a>
+            <a href="gallery.html" class="text-white/80 py-1 hover:text-red-300 transition">Gallery</a>
+            <a href="contact.html" class="text-white/80 py-1 hover:text-red-300 transition">Contact</a>
+            <a href="request-service.html" class="bg-red-700 text-center py-2 rounded-full font-bold mt-1">Request Service</a>
+            <a href="chief-office.html" class="btn-chief text-center py-2 rounded-full font-bold mt-1">Chief of Office Staff</a>
+        </div>
+    </header>
+
+    <main class="px-4 md:px-8 max-w-7xl mx-auto">
+        <div class="animate-fade-up">
+            <!-- Header Section -->
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-1 rounded-full bg-white/10 text-red-200 text-sm mb-3">55th Legislature • Nimba County</div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-4"><span class="bg-gradient-to-r from-white via-red-300 to-blue-300 bg-clip-text text-transparent">Legislative Work</span></h1>
+                <p class="max-w-3xl mx-auto text-gray-300 text-lg">Tracking Senator Twayen's legislative agenda — from bills sponsored to committee leadership and key votes in the Liberian Senate.</p>
+            </div>
+
+            <!-- Committee Leadership Section -->
+            <div class="glass-card p-6 md:p-8 mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-gavel text-3xl text-red-400"></i>
+                    <h2 class="text-2xl font-bold">Committee Leadership & Memberships</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <div class="flex items-center gap-2 mb-2"><i class="fas fa-star text-yellow-500"></i><span class="font-semibold text-red-300">Chair</span></div>
+                        <p class="text-lg">Joint Legislative Committees on Modernization</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <div class="flex items-center gap-2 mb-2"><i class="fas fa-users text-blue-400"></i><span class="font-semibold">Member</span></div>
+                        <p>Committee on Education & Public Administration</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <div class="flex items-center gap-2 mb-2"><i class="fas fa-users text-blue-400"></i><span class="font-semibold">Member</span></div>
+                        <p>Committee on Agriculture, Forestry & Fisheries</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <div class="flex items-center gap-2 mb-2"><i class="fas fa-users text-blue-400"></i><span class="font-semibold">Member</span></div>
+                        <p>Committee on Lands, Mines, Energy & Environment</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="glass-card p-6 text-center"><div class="stat-number-lg">12</div><div class="font-semibold text-red-300">Bills Sponsored</div><div class="text-xs text-gray-400">Across 2024-2025 Session</div></div>
+                <div class="glass-card p-6 text-center"><div class="stat-number-lg">230+</div><div class="font-semibold text-red-300">Votes Cast</div><div class="text-xs text-gray-400">With 95% Attendance</div></div>
+                <div class="glass-card p-6 text-center"><div class="stat-number-lg">4</div><div class="font-semibold text-red-300">Committees</div><div class="text-xs text-gray-400">Chairing 1 Committee</div></div>
+                <div class="glass-card p-6 text-center"><div class="stat-number-lg">2024</div><div class="font-semibold text-red-300">Term Began</div><div class="text-xs text-gray-400">55th Legislature</div></div>
+            </div>
+
+            <!-- Bills & Legislation Section -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-file-alt text-3xl text-red-400"></i>
+                    <h2 class="text-2xl font-bold">Bills & Legislation</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Bill 1 -->
+                    <div class="glass-card p-6 status-passed">
+                        <div class="flex justify-between items-start flex-wrap gap-2 mb-3">
+                            <h3 class="text-xl font-bold">Nimba County Education Empowerment Act</h3>
+                            <span class="bg-green-600/30 text-green-300 px-3 py-1 rounded-full text-xs font-semibold"><i class="fas fa-check-circle mr-1"></i> Passed</span>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-2">Session 2025</p>
+                        <p class="text-gray-200">Allocates resources for school construction, teacher training and student scholarships across Nimba County's 17 districts.</p>
+                    </div>
+                    <!-- Bill 2 -->
+                    <div class="glass-card p-6 status-committee">
+                        <div class="flex justify-between items-start flex-wrap gap-2 mb-3">
+                            <h3 class="text-xl font-bold">Rural Healthcare Access Bill</h3>
+                            <span class="bg-orange-600/30 text-orange-300 px-3 py-1 rounded-full text-xs font-semibold"><i class="fas fa-clock mr-1"></i> In Committee</span>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-2">Session 2025</p>
+                        <p class="text-gray-200">Mandates equipping of rural clinics and deployment of healthcare workers to remote districts across Nimba.</p>
+                    </div>
+                    <!-- Bill 3 -->
+                    <div class="glass-card p-6 status-sponsored">
+                        <div class="flex justify-between items-start flex-wrap gap-2 mb-3">
+                            <h3 class="text-xl font-bold">Agricultural Cooperative Support Act</h3>
+                            <span class="bg-blue-600/30 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold"><i class="fas fa-pen mr-1"></i> Sponsored</span>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-2">Session 2024</p>
+                        <p class="text-gray-200">Provides funding mechanisms and tax relief for farming cooperatives across the county, boosting local agriculture.</p>
+                    </div>
+                    <!-- Bill 4 -->
+                    <div class="glass-card p-6 status-passed">
+                        <div class="flex justify-between items-start flex-wrap gap-2 mb-3">
+                            <h3 class="text-xl font-bold">Youth Employment & Vocational Training Bill</h3>
+                            <span class="bg-green-600/30 text-green-300 px-3 py-1 rounded-full text-xs font-semibold"><i class="fas fa-check-circle mr-1"></i> Passed</span>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-2">Session 2024</p>
+                        <p class="text-gray-200">Establishes vocational training centers and youth employment grants in Nimba and beyond, empowering the next generation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legislative Priorities Section -->
+            <div class="glass-card p-6 md:p-8 mt-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-chart-line text-3xl text-red-400"></i>
+                    <h2 class="text-2xl font-bold">Legislative Priorities</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="text-center p-4"><i class="fas fa-graduation-cap text-3xl text-blue-400 mb-2 block"></i><p class="font-semibold">Education Reform</p><p class="text-sm text-gray-300">Expanding access to quality education across Nimba</p></div>
+                    <div class="text-center p-4"><i class="fas fa-hospital-user text-3xl text-blue-400 mb-2 block"></i><p class="font-semibold">Healthcare Access</p><p class="text-sm text-gray-300">Rural clinic upgrades and health worker deployment</p></div>
+                    <div class="text-center p-4"><i class="fas fa-road text-3xl text-blue-400 mb-2 block"></i><p class="font-semibold">Infrastructure</p><p class="text-sm text-gray-300">Roads, electricity, and clean water for all districts</p></div>
+                    <div class="text-center p-4"><i class="fas fa-hand-holding-usd text-3xl text-blue-400 mb-2 block"></i><p class="font-semibold">Economic Empowerment</p><p class="text-sm text-gray-300">Support for small businesses and cooperatives</p></div>
+                    <div class="text-center p-4"><i class="fas fa-leaf text-3xl text-blue-400 mb-2 block"></i><p class="font-semibold">Agriculture</p><p class="text-sm text-gray-300">Modernizing farming and food security initiatives</p></div>
+                    <div class="text-center p-4"><i class="fas fa-users text-3xl text-blue-400 mb-2 block"></i><p class="font-semibold">Youth & Women</p><p class="text-sm text-gray-300">Job creation and empowerment programs</p></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card rounded-t-3xl mt-10 py-8 px-5 text-center">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-red-700 flex items-center justify-center text-white font-bold">NT</div><div class="text-sm">© 2025 Office of Senator Nya D. Twayen, Jr.<br>Republic of Liberia – Nimba County</div></div>
+            <div class="flex gap-6"><a href="https://www.facebook.com/share/1PZNyYNKti/" target="_blank" class="hover:text-red-400"><i class="fab fa-facebook-f text-xl"></i></a><a href="#" class="hover:text-red-400"><i class="fab fa-twitter text-xl"></i></a><a href="https://www.instagram.com/nyatwayen" target="_blank" class="hover:text-red-400"><i class="fab fa-instagram text-xl"></i></a></div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if(mobileBtn) mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>
