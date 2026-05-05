@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>About Senator Nya D. Twayen, Jr. | Nimba County</title>
+    <!-- Google Fonts + Tailwind + Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at 10% 20%, rgba(10, 20, 35, 0.9), rgba(2, 8, 23, 0.95));
+            color: #f0f4fa;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .bg-flag-aura {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(125deg, #0a1a2f 0%, #04122b 45%, #80000030 70%, #00286830 100%);
+        }
+
+        .bg-flag-aura::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle, rgba(191, 13, 62, 0.08) 0%, rgba(0, 40, 104, 0.12) 60%, transparent 80%);
+            animation: slowDrift 28s infinite alternate;
+        }
+
+        @keyframes slowDrift {
+            0% { transform: translate(0%, 0%) rotate(0deg); }
+            100% { transform: translate(-5%, -8%) rotate(2deg); }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 70, 85, 0.4);
+            box-shadow: 0 25px 45px -12px rgba(220, 20, 60, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-nav {
+            background: rgba(5, 15, 35, 0.55);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 0 0 2rem 2rem;
+        }
+
+        .btn-lib {
+            background: linear-gradient(95deg, #BF0D3E, #002868);
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-lib:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px -8px rgba(191, 13, 62, 0.5);
+            background: linear-gradient(95deg, #d41248, #00337e);
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #BF0D3E;
+            transition: 0.25s ease;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .circle-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .senator-logo {
+            object-position: center 25%;
+        }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(25px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a1428;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #BF0D3E;
+            border-radius: 10px;
+        }
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: #BF0D3E;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 12px;
+            box-shadow: 0 0 8px rgba(191,13,62,0.5);
+        }
+        .section-title {
+            border-left: 4px solid #BF0D3E;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .stat-badge {
+            background: rgba(191,13,62,0.2);
+            border: 1px solid rgba(191,13,62,0.4);
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-flag-aura"></div>
+
+    <!-- ========== GLASS NAVIGATION ========== -->
+    <header class="glass-nav fixed top-0 left-0 w-full z-50 px-5 md:px-12 py-3">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white/30 bg-white/10 shadow-md">
+                    <img src="images/senator-main.jpg" alt="Senator" class="circle-image senator-logo">
+                </div>
+                <div>
+                    <div class="text-sm md:text-base font-semibold text-white/90">Republic of Liberia</div>
+                    <div class="text-sm md:text-lg font-bold text-white">Senator Nya D. Twayen, Jr</div>
+                    <div class="text-xs text-red-300">Nimba County • 55th Legislature</div>
+                </div>
+            </div>
+            <div class="hidden lg:flex flex-wrap items-center gap-x-5 text-sm font-medium">
+                <a href="index.html" class="nav-link text-white/80 hover:text-white">Home</a>
+                <a href="about.html" class="nav-link active text-white">About</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">Legislative Work</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">Projects</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">Foundation</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">News</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">Gallery</a>
+                <a href="#" class="nav-link text-white/80 hover:text-white">Contact</a>
+                <a href="#" class="bg-red-700/60 hover:bg-red-700 px-4 py-2 rounded-full text-white font-bold">Request Service</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobileMenuBtn" class="text-white text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 w-full glass-card rounded-b-2xl mt-1 p-4 flex flex-col gap-3 z-40">
+            <a href="index.html" class="text-white py-1">Home</a>
+            <a href="about.html" class="text-white py-1">About</a>
+            <a href="#" class="text-white/80">Legislative Work</a>
+            <a href="#" class="text-white/80">Projects</a>
+            <a href="#" class="text-white/80">Foundation</a>
+            <a href="#" class="text-white/80">News</a>
+            <a href="#" class="text-white/80">Gallery</a>
+            <a href="#" class="text-white/80">Contact</a>
+            <a href="#" class="bg-red-700 text-center py-2 rounded-full font-bold">Request Service</a>
+        </div>
+    </header>
+
+    <main class="pt-32 md:pt-36 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+        <div class="animate-fade-up">
+            <!-- Hero Section -->
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-1 rounded-full bg-white/10 text-red-200 text-sm mb-3">Nimba County • 55th Legislature</div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4"><span class="bg-gradient-to-r from-white via-red-300 to-blue-300 bg-clip-text text-transparent">About Senator</span><br><span class="text-3xl md:text-4xl text-white/80">Nya D. Twayen, Jr.</span></h1>
+                <p class="max-w-3xl mx-auto text-gray-300 text-lg">A dedicated public servant, policy expert, and advocate for the people of Nimba County with over 20 years of experience in public service, legislative leadership, and community development.</p>
+            </div>
+
+            <!-- Personal Details & Quick Stats Row -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Personal Info Card -->
+                <div class="glass-card p-6 md:p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-user-circle text-4xl text-red-400"></i>
+                        <h2 class="text-2xl font-bold">Personal Details</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex flex-wrap gap-3"><span class="stat-badge"><i class="fas fa-calendar-alt text-red-400 mr-2"></i>Date of Birth: May 11, 1977</span></div>
+                        <div class="flex flex-wrap gap-3"><span class="stat-badge"><i class="fas fa-home text-red-400 mr-2"></i>Hometown: Bunadin Town, Nimba County</span></div>
+                        <div class="flex flex-wrap gap-3"><span class="stat-badge"><i class="fas fa-heart text-red-400 mr-2"></i>Married to: Mrs. Ruth Twayen</span></div>
+                        <div class="flex flex-wrap gap-3"><span class="stat-badge"><i class="fas fa-children text-red-400 mr-2"></i>Children: Nehwon, Paul, Debie & Yongor Twayen</span></div>
+                        <div class="flex flex-wrap gap-3"><span class="stat-badge"><i class="fas fa-male text-red-400 mr-2"></i>Father: Nya D. Twayen, Sr.</span></div>
+                        <div class="flex flex-wrap gap-3"><span class="stat-badge"><i class="fas fa-female text-red-400 mr-2"></i>Mother: Sarah Gbarnjah Yoko</span></div>
+                    </div>
+                </div>
+
+                <!-- Contact / Quick Facts -->
+                <div class="glass-card p-6 md:p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-phone-alt text-4xl text-blue-400"></i>
+                        <h2 class="text-2xl font-bold">Contact & Service</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <div><i class="fas fa-phone mr-3 text-red-400"></i> +231 886 568 946 / +231 770 376 595</div>
+                        <div><i class="fas fa-envelope mr-3 text-red-400"></i> ntwayen77@gmail.com</div>
+                        <div><i class="fas fa-map-marker-alt mr-3 text-red-400"></i> Paynesville City, Liberia</div>
+                        <div class="pt-4"><span class="stat-badge"><i class="fas fa-gavel mr-2"></i>Senator, Nimba County</span><span class="stat-badge ml-2"><i class="fas fa-hand-holding-heart mr-2"></i>Foundation Chair</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="glass-card p-6 md:p-8 mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-graduation-cap text-4xl text-red-400"></i>
+                    <h2 class="text-2xl font-bold">Education & Academic Background</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3"><span class="timeline-dot mt-2"></span><div><p class="font-semibold">Ganta United Methodist High School</p><p class="text-gray-300 text-sm">High School Diploma — 1999</p></div></div>
+                        <div class="flex items-start gap-3"><span class="timeline-dot mt-2"></span><div><p class="font-semibold">University of Liberia</p><p class="text-gray-300 text-sm">BA Sociology (Summa Cum Laude) — 2007</p></div></div>
+                        <div class="flex items-start gap-3"><span class="timeline-dot mt-2"></span><div><p class="font-semibold">Australian National University</p><p class="text-gray-300 text-sm">MA Public Policy (Policy Analysis) — 2012</p></div></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3"><span class="timeline-dot mt-2"></span><div><p class="font-semibold">University of Liberia</p><p class="text-gray-300 text-sm">MSc International Relations — 2016</p></div></div>
+                        <div class="flex items-start gap-3"><span class="timeline-dot mt-2"></span><div><p class="font-semibold">London School of Economics</p><p class="text-gray-300 text-sm">Executive Certificate: Strategic Decision Making — 2019</p></div></div>
+                        <div class="flex items-start gap-3"><span class="timeline-dot mt-2"></span><div><p class="font-semibold">World Bank & ILO Certifications</p><p class="text-gray-300 text-sm">Pension Core Course (2014,2016) • Social Security Academy (2017)</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Experience - Main Career -->
+            <div class="glass-card p-6 md:p-8 mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-briefcase text-4xl text-red-400"></i>
+                    <h2 class="text-2xl font-bold">Professional Experience</h2>
+                </div>
+                <div class="space-y-6">
+                    <div><div class="flex justify-between flex-wrap"><h3 class="text-xl font-semibold text-red-300">Senator, Nimba County</h3><span class="text-gray-400 text-sm">Liberian Senate | 2024 – Present</span></div><p class="text-gray-300 mt-2">Chairs the Joint Legislative Committees on Modernization. Responsible for lawmaking, representing Nimba County, oversight of the Executive Branch, and confirming presidential appointments. Advocates for constituent interests at the national level.</p></div>
+                    <div><div class="flex justify-between flex-wrap"><h3 class="text-xl font-semibold text-blue-300">Deputy Director General</h3><span class="text-gray-400 text-sm">National Social Security & Welfare Corp | 2013 – 2022</span></div><p class="text-gray-300 mt-2">Supervised Assistant Directors General, increased productivity by over 25%, and implemented compliance strategies that boosted contribution collections. Result-oriented leadership in achieving corporate goals.</p></div>
+                    <div><div class="flex justify-between flex-wrap"><h3 class="text-xl font-semibold text-red-300">Assistant Minister for Youth Services</h3><span class="text-gray-400 text-sm">Ministry of Youth & Sports | 2008 – 2011</span></div><p class="text-gray-300 mt-2">Coordinated nationwide youth programs, formulated youth development policies, liaised with NGOs and international organizations to secure support for youth initiatives.</p></div>
+                    <div><div class="flex justify-between flex-wrap"><h3 class="text-xl font-semibold text-blue-300">Member, Board of Directors</h3><span class="text-gray-400 text-sm">Liberia Electricity Corporation (LEC) | 2006 – 2008</span></div><p class="text-gray-300 mt-2">Made prudent policy decisions, designed fundraising strategies, and regulated management activities to improve the Corporation.</p></div>
+                    <div><div class="flex justify-between flex-wrap"><h3 class="text-xl font-semibold text-red-300">Director of Youth Services</h3><span class="text-gray-400 text-sm">Ministry of Youth & Sports | 2006 – 2007</span></div><p class="text-gray-300 mt-2">Derived innovative plans for the Bureau of Youth Services, formulated comprehensive budgets, and collaborated with NGOs on youth-led initiatives.</p></div>
+                    <div><div class="flex justify-between flex-wrap"><h3 class="text-xl font-semibold text-blue-300">Executive Director</h3><span class="text-gray-400 text-sm">National Elections Watch | 2005</span></div><p class="text-gray-300 mt-2">Coordinated civic educators, trained and deployed poll monitors to ensure free, fair, and transparent elections during the 2005 general elections.</p></div>
+                </div>
+            </div>
+
+            <!-- Key Skills & International Exposure -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="glass-card p-6">
+                    <div class="flex items-center gap-3 mb-4"><i class="fas fa-chart-line text-3xl text-red-400"></i><h3 class="text-xl font-bold">Core Competencies</h3></div>
+                    <div class="flex flex-wrap gap-2"><span class="stat-badge">Policy Analysis</span><span class="stat-badge">Legislative Oversight</span><span class="stat-badge">Public Policy Reform</span><span class="stat-badge">Strategic Planning</span><span class="stat-badge">Youth Development</span><span class="stat-badge">Social Security Administration</span><span class="stat-badge">International Relations</span><span class="stat-badge">Program Implementation</span></div>
+                </div>
+                <div class="glass-card p-6">
+                    <div class="flex items-center gap-3 mb-4"><i class="fas fa-globe text-3xl text-blue-300"></i><h3 class="text-xl font-bold">Global Exposure</h3></div>
+                    <div class="space-y-2"><p><i class="fas fa-check-circle text-green-400 text-sm mr-2"></i>Youth Employment Summit – Baku, Azerbaijan (2008)</p><p><i class="fas fa-check-circle text-green-400 text-sm mr-2"></i>ECOWAS Youth Expert Meeting – Cotonou, Benin (2008)</p><p><i class="fas fa-check-circle text-green-400 text-sm mr-2"></i>Technical Vocational Education Workshop – Dakar, Senegal (2009)</p><p><i class="fas fa-check-circle text-green-400 text-sm mr-2"></i>World Bank Pension Course – Washington DC, USA (2014, 2016)</p><p><i class="fas fa-check-circle text-green-400 text-sm mr-2"></i>ILO Social Security Academy – Turin, Italy (2017)</p></div>
+                </div>
+            </div>
+
+            <!-- Summary of Qualification -->
+            <div class="glass-card p-6 md:p-8">
+                <div class="flex items-center gap-3 mb-4"><i class="fas fa-medal text-3xl text-red-400"></i><h3 class="text-xl font-bold">Summary of Qualifications</h3></div>
+                <div class="grid md:grid-cols-2 gap-4 text-gray-300">
+                    <div><span class="text-red-300">✓</span> Demonstrated knowledge of public policy programs/reforms</div>
+                    <div><span class="text-red-300">✓</span> 7+ years experience in youth development programs</div>
+                    <div><span class="text-red-300">✓</span> Proven capacity in social policy implementation</div>
+                    <div><span class="text-red-300">✓</span> 3 years managing National Youth Voluntary Service (UNDP)</div>
+                    <div><span class="text-red-300">✓</span> Expertise in policy analysis & advocacy</div>
+                    <div><span class="text-red-300">✓</span> Strong skills in organizational behavior & performance management</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card rounded-t-3xl mt-10 py-8 px-5 mx-4 md:mx-8 border-t border-white/20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-red-700 flex items-center justify-center text-white font-bold">NT</div>
+                <div class="text-sm">© 2025 Office of Senator Nya D. Twayen, Jr. <br> Republic of Liberia – Nimba County</div>
+            </div>
+            <div class="flex gap-6 text-gray-300">
+                <a href="https://www.facebook.com/share/1PZNyYNKti/" target="_blank" class="hover:text-red-400"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="hover:text-red-400"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="https://www.instagram.com/nyatwayen" target="_blank" class="hover:text-red-400"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <div class="text-xs text-white/50">Designed with glass & purpose | Building a better Liberia</div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if(mobileBtn) mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>
