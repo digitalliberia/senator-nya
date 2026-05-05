@@ -158,13 +158,21 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 30%; /* Adjusts focus point to show face properly */
+            object-position: center;
         }
         
-        /* Specific adjustment for flag to show full flag */
-        .flag-image {
+        /* Specific adjustment for senator logo to show face properly */
+        .senator-logo {
+            object-position: center 25%;
+        }
+        
+        /* Specific adjustment for flag to show full flag centered */
+        .flag-circle-image {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             object-position: center;
+            transform: scale(1.05);
         }
 
         /* Ensure rounded containers clip images properly */
@@ -213,10 +221,10 @@
     <!-- ========== GLASS NAVIGATION ========== -->
     <header class="glass-nav fixed top-0 left-0 w-full z-50 px-5 md:px-12 py-3 transition-all">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-            <!-- left section: senator image (FIXED - now shows full face in circle) -->
+            <!-- left section: senator image (now properly fitted in circle) -->
             <div class="flex items-center gap-4">
                 <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center shadow-md">
-                    <img src="images/senator-main.jpg" alt="Senator Nya D. Twayen, Jr" class="circle-image" style="object-position: center 20%;">
+                    <img src="images/senator-main.jpg" alt="Senator Nya D. Twayen, Jr" class="circle-image senator-logo">
                 </div>
                 <div>
                     <div class="text-sm md:text-base font-semibold tracking-wide text-white/90">Republic of Liberia</div>
@@ -284,7 +292,7 @@
                 </div>
             </div>
 
-            <!-- Big Senator Image with ROTATING SLIDESHOW (changes every 2 seconds) - NOW WITH 8 IMAGES TOTAL -->
+            <!-- Big Senator Image with ROTATING SLIDESHOW (changes every 2 seconds) - 8 IMAGES TOTAL -->
             <div class="glass-card p-5 md:p-8 my-12 flex flex-col md:flex-row gap-10 items-center justify-center">
                 <div class="flex-shrink-0 w-full md:w-2/5">
                     <div class="relative">
@@ -351,11 +359,11 @@
                 </div>
             </div>
             
-            <!-- FLAG SECTION - FIXED: full flag visible in circle now -->
+            <!-- FLAG SECTION - PERFECT CIRCLE WITH FULL FLAG VISIBLE -->
             <div class="glass-card p-6 flex flex-wrap gap-6 justify-between items-center mt-6">
                 <div class="flex items-center gap-4">
-                    <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0 bg-white/10">
-                        <img src="images/liberia-flag.png" class="circle-image flag-image" style="object-fit: cover; object-position: center;" alt="Liberian Flag">
+                    <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0 bg-white/10 flex items-center justify-center">
+                        <img src="images/liberia-flag.png" class="flag-circle-image" alt="Liberian Flag">
                     </div>
                     <div><p class="font-semibold">"One Nimba, One Future"</p><p class="text-sm text-gray-300">Senator Twayen's message of unity and progress resonates across the county.</p></div>
                 </div>
