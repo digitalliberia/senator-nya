@@ -129,6 +129,28 @@
             border-color: #BF0D3E;
         }
 
+        /* Heartbeat animation for icons */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.15); }
+            35% { transform: scale(1.1); }
+            45% { transform: scale(1.2); }
+            55% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .heartbeat-icon {
+            display: inline-block;
+            animation: heartbeat 1.8s ease-in-out infinite;
+        }
+
+        /* Image fit fix for circles */
+        .circle-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
         @media (max-width: 1024px) {
             .glass-nav .flex-wrap {
                 justify-content: center;
@@ -158,6 +180,10 @@
             transform: scale(1.01);
             box-shadow: 0 30px 45px -15px rgba(0,0,0,0.6);
         }
+        /* rotating image fade transition */
+        .fade-transition {
+            transition: opacity 0.5s ease-in-out;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -169,7 +195,7 @@
             <!-- left section: senator image (senator-main.jpg) + republic + name -->
             <div class="flex items-center gap-4">
                 <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center shadow-md">
-                    <img src="images/senator-main.jpg" alt="Senator Nya D. Twayen, Jr" class="w-full h-full object-cover">
+                    <img src="images/senator-main.jpg" alt="Senator Nya D. Twayen, Jr" class="circle-image">
                 </div>
                 <div>
                     <div class="text-sm md:text-base font-semibold tracking-wide text-white/90">Republic of Liberia</div>
@@ -215,33 +241,33 @@
                 </div>
             </div>
 
-            <!-- Stats Cards -->
+            <!-- Stats Cards with Heartbeat Icons -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 my-16">
                 <div class="glass-card p-6 text-center transform transition-all duration-300 hover:scale-105">
-                    <i class="fas fa-map-marked-alt text-4xl text-red-400 mb-3"></i>
+                    <i class="fas fa-map-marked-alt text-4xl text-red-400 mb-3 heartbeat-icon"></i>
                     <div class="stat-number text-5xl">17</div>
                     <div class="font-bold text-lg mt-1 text-white">Districts Served</div>
                     <div class="text-xs text-gray-300 mt-1">Across Nimba County</div>
                 </div>
                 <div class="glass-card p-6 text-center transition-all duration-300 hover:scale-105">
-                    <i class="fas fa-hands-helping text-4xl text-blue-300 mb-3"></i>
+                    <i class="fas fa-hands-helping text-4xl text-blue-300 mb-3 heartbeat-icon"></i>
                     <div class="stat-number text-5xl">50+</div>
                     <div class="font-bold text-lg mt-1 text-white">Community Projects</div>
                     <div class="text-xs text-gray-300">Empowering grassroots</div>
                 </div>
                 <div class="glass-card p-6 text-center transition-all duration-300 hover:scale-105">
-                    <i class="fas fa-heartbeat text-4xl text-red-400 mb-3"></i>
+                    <i class="fas fa-heartbeat text-4xl text-red-400 mb-3 heartbeat-icon"></i>
                     <div class="stat-number text-5xl">100K+</div>
                     <div class="font-bold text-lg mt-1 text-white">Lives Impacted</div>
                     <div class="text-xs text-gray-300">Direct humanitarian reach</div>
                 </div>
             </div>
 
-            <!-- Big Senator Image (using senator-portrait.jpg) -->
+            <!-- Big Senator Image with ROTATING SLIDESHOW (changes every 2 seconds) -->
             <div class="glass-card p-5 md:p-8 my-12 flex flex-col md:flex-row gap-10 items-center justify-center">
                 <div class="flex-shrink-0 w-full md:w-2/5">
                     <div class="relative">
-                        <img src="images/senator-portrait.jpg" alt="Honorable Senator Nya D. Twayen, Jr" class="senator-frame w-full object-cover rounded-2xl shadow-2xl">
+                        <img id="rotatingSenatorImage" src="images/senator-portrait.jpg" alt="Honorable Senator Nya D. Twayen, Jr" class="senator-frame w-full object-cover rounded-2xl shadow-2xl fade-transition">
                         <div class="absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-black/70 backdrop-blur-md px-6 py-2 rounded-full border border-red-500/50 whitespace-nowrap text-sm md:text-base font-bold text-white">Honorable Nya D. Twayen, Jr <span class="text-red-300">| Senator, Nimba County</span></div>
                     </div>
                 </div>
@@ -280,7 +306,7 @@
                 </div>
             </div>
 
-            <!-- ========== BIG HERO IMAGE (senator8.jpg) inserted right between the info grid and the next section ========= -->
+            <!-- ========== BIG HERO IMAGE (senator8.jpg) ========= -->
             <div class="my-16 w-full">
                 <div class="glass-card p-3 md:p-5 overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 hover:shadow-red-900/20">
                     <img src="images/senator8.jpg" alt="Senator Nya D. Twayen, Jr - Leadership in Action" class="w-full h-auto object-cover rounded-xl hero-image-full">
@@ -288,7 +314,7 @@
                 </div>
             </div>
 
-            <!-- Legislative Milestones & Nya D. Twayen Foundation (remains identical but enhanced) -->
+            <!-- Legislative Milestones & Nya D. Twayen Foundation -->
             <div class="my-16 grid md:grid-cols-2 gap-8">
                 <div class="glass-card p-6 flex flex-col">
                     <i class="fas fa-chalkboard-teacher text-4xl text-red-400 mb-3"></i>
@@ -304,10 +330,12 @@
                 </div>
             </div>
             
-            <!-- additional card with liberia flag image (updated) and news -->
+            <!-- Additional card with liberia flag image (perfect circle) and social links integrated -->
             <div class="glass-card p-6 flex flex-wrap gap-6 justify-between items-center mt-6">
                 <div class="flex items-center gap-4">
-                    <img src="images/liberia-flag.png" class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md" alt="Liberian Flag">
+                    <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0">
+                        <img src="images/liberia-flag.png" class="circle-image" alt="Liberian Flag">
+                    </div>
                     <div><p class="font-semibold">"One Nimba, One Future"</p><p class="text-sm text-gray-300">Senator Twayen's message of unity and progress resonates across the county.</p></div>
                 </div>
                 <div class="text-right">
@@ -317,7 +345,7 @@
         </div>
     </main>
 
-    <!-- Footer with glass & liberian touch -->
+    <!-- Footer with glass & liberian touch + ACTIVE SOCIAL LINKS -->
     <footer class="glass-card rounded-t-3xl mt-10 py-8 px-5 mx-4 md:mx-8 border-t border-white/20">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
@@ -325,9 +353,9 @@
                 <div class="text-sm">© 2025 Office of Senator Nya D. Twayen, Jr. <br> Republic of Liberia – Nimba County</div>
             </div>
             <div class="flex gap-6 text-gray-300">
-                <a href="#" class="hover:text-red-400 transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="https://www.facebook.com/share/1PZNyYNKti/" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition"><i class="fab fa-facebook-f text-xl"></i></a>
                 <a href="#" class="hover:text-red-400 transition"><i class="fab fa-twitter text-xl"></i></a>
-                <a href="#" class="hover:text-red-400 transition"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="https://www.instagram.com/nyatwayen?igsh=ZTJwaWJiYTF0emR3" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition"><i class="fab fa-instagram text-xl"></i></a>
             </div>
             <div class="text-xs text-white/50">Designed with glass & purpose | Building a better Liberia</div>
         </div>
@@ -358,6 +386,38 @@
         const homeLink = Array.from(navLinks).find(l => l.innerText.trim() === 'Home');
         if(homeLink) {
             homeLink.classList.add('active', 'text-white');
+        }
+
+        // ----- ROTATING SENATOR IMAGE (every 2 seconds) -----
+        const rotatingImg = document.getElementById('rotatingSenatorImage');
+        if (rotatingImg) {
+            // Images to rotate: start with senator-portrait, then nya.jpg, nya1.jpg, nya2.jpg
+            const imageList = [
+                'images/senator-portrait.jpg',
+                'images/nya.jpg',
+                'images/nya1.jpg',
+                'images/nya2.jpg'
+            ];
+            let currentIndex = 0;
+            
+            // Preload images for smoother transitions
+            const preloadImages = () => {
+                imageList.forEach(src => {
+                    const img = new Image();
+                    img.src = src;
+                });
+            };
+            preloadImages();
+            
+            // Change image every 2 seconds with fade effect
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % imageList.length;
+                rotatingImg.style.opacity = '0.5';
+                setTimeout(() => {
+                    rotatingImg.src = imageList[currentIndex];
+                    rotatingImg.style.opacity = '1';
+                }, 150);
+            }, 2000);
         }
     </script>
 </body>
