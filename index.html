@@ -143,12 +143,17 @@
             animation: heartbeat 1.8s ease-in-out infinite;
         }
 
-        /* Image fit fix for circles */
+        /* Image fit fix for circles - ensures perfect fit */
         .circle-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
+        }
+
+        /* Ensure rounded containers clip images properly */
+        .rounded-full {
+            overflow: hidden;
         }
 
         @media (max-width: 1024px) {
@@ -192,7 +197,7 @@
     <!-- ========== GLASS NAVIGATION ========== -->
     <header class="glass-nav fixed top-0 left-0 w-full z-50 px-5 md:px-12 py-3 transition-all">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-            <!-- left section: senator image (senator-main.jpg) + republic + name -->
+            <!-- left section: senator image + republic + name (circle perfect fit) -->
             <div class="flex items-center gap-4">
                 <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center shadow-md">
                     <img src="images/senator-main.jpg" alt="Senator Nya D. Twayen, Jr" class="circle-image">
@@ -263,7 +268,7 @@
                 </div>
             </div>
 
-            <!-- Big Senator Image with ROTATING SLIDESHOW (changes every 2 seconds) -->
+            <!-- Big Senator Image with ROTATING SLIDESHOW (changes every 2 seconds) - NOW WITH 7 IMAGES -->
             <div class="glass-card p-5 md:p-8 my-12 flex flex-col md:flex-row gap-10 items-center justify-center">
                 <div class="flex-shrink-0 w-full md:w-2/5">
                     <div class="relative">
@@ -330,7 +335,7 @@
                 </div>
             </div>
             
-            <!-- Additional card with liberia flag image (perfect circle) and social links integrated -->
+            <!-- Additional card with liberia flag image (perfect circle) -->
             <div class="glass-card p-6 flex flex-wrap gap-6 justify-between items-center mt-6">
                 <div class="flex items-center gap-4">
                     <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0">
@@ -345,7 +350,7 @@
         </div>
     </main>
 
-    <!-- Footer with glass & liberian touch + ACTIVE SOCIAL LINKS -->
+    <!-- Footer with glass & social links -->
     <footer class="glass-card rounded-t-3xl mt-10 py-8 px-5 mx-4 md:mx-8 border-t border-white/20">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
@@ -388,19 +393,23 @@
             homeLink.classList.add('active', 'text-white');
         }
 
-        // ----- ROTATING SENATOR IMAGE (every 2 seconds) -----
+        // ----- ROTATING SENATOR IMAGE (every 2 seconds) - UPDATED WITH 7 IMAGES -----
         const rotatingImg = document.getElementById('rotatingSenatorImage');
         if (rotatingImg) {
-            // Images to rotate: start with senator-portrait, then nya.jpg, nya1.jpg, nya2.jpg
+            // Complete image rotation list: original + nya series + 4 new PNG images
             const imageList = [
                 'images/senator-portrait.jpg',
                 'images/nya.jpg',
                 'images/nya1.jpg',
-                'images/nya2.jpg'
+                'images/nya2.jpg',
+                'images/nya4.png',
+                'images/nya5.png',
+                'images/nya6.png',
+                'images/nya7.png'
             ];
             let currentIndex = 0;
             
-            // Preload images for smoother transitions
+            // Preload all images for smoother transitions
             const preloadImages = () => {
                 imageList.forEach(src => {
                     const img = new Image();
@@ -409,14 +418,14 @@
             };
             preloadImages();
             
-            // Change image every 2 seconds with fade effect
+            // Change image every 2 seconds with smooth fade effect
             setInterval(() => {
                 currentIndex = (currentIndex + 1) % imageList.length;
-                rotatingImg.style.opacity = '0.5';
+                rotatingImg.style.opacity = '0.4';
                 setTimeout(() => {
                     rotatingImg.src = imageList[currentIndex];
                     rotatingImg.style.opacity = '1';
-                }, 150);
+                }, 180);
             }, 2000);
         }
     </script>
