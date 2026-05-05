@@ -212,6 +212,20 @@
         .fade-transition {
             transition: opacity 0.5s ease-in-out;
         }
+        
+        /* Chief of Office Staff button style - different color (gold/blue accent) */
+        .btn-chief {
+            background: linear-gradient(95deg, #1E3A6F, #0F2B4F);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .btn-chief:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px -8px rgba(30, 58, 111, 0.5);
+            background: linear-gradient(95deg, #2A4A8A, #1A3A6A);
+            border-color: rgba(255, 215, 0, 0.7);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -232,17 +246,20 @@
                 </div>
             </div>
 
-            <!-- Desktop navigation -->
+            <!-- Desktop navigation - ALL LINKS NOW WORKING with proper page links -->
             <div class="hidden lg:flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
-                <a href="#" class="nav-link active text-white">Home</a>
-                <a href="#" class="nav-link text-white/80 hover:text-white">About</a>
-                <a href="#" class="nav-link text-white/80 hover:text-white">Legislative Work</a>
-                <a href="#" class="nav-link text-white/80 hover:text-white">Projects</a>
-                <a href="#" class="nav-link text-white/80 hover:text-white">Foundation</a>
-                <a href="#" class="nav-link text-white/80 hover:text-white">News</a>
-                <a href="#" class="nav-link text-white/80 hover:text-white">Gallery</a>
-                <a href="#" class="nav-link text-white/80 hover:text-white">Contact</a>
-                <a href="#" class="bg-red-700/60 hover:bg-red-700 px-4 py-2 rounded-full text-white font-bold text-base shadow-lg transition-all ml-1 border border-white/20">Request Service</a>
+                <a href="index.html" class="nav-link active text-white">Home</a>
+                <a href="about.html" class="nav-link text-white/80 hover:text-white">About</a>
+                <a href="legislative.html" class="nav-link text-white/80 hover:text-white">Legislative Work</a>
+                <a href="projects.html" class="nav-link text-white/80 hover:text-white">Projects</a>
+                <a href="foundation.html" class="nav-link text-white/80 hover:text-white">Foundation</a>
+                <a href="news.html" class="nav-link text-white/80 hover:text-white">News</a>
+                <a href="gallery.html" class="nav-link text-white/80 hover:text-white">Gallery</a>
+                <a href="contact.html" class="nav-link text-white/80 hover:text-white">Contact</a>
+                <!-- Request Service button -->
+                <a href="request-service.html" class="bg-red-700/60 hover:bg-red-700 px-4 py-2 rounded-full text-white font-bold text-base shadow-lg transition-all ml-1 border border-white/20">Request Service</a>
+                <!-- Chief of Office Staff button (different color, same size) -->
+                <a href="chief-office.html" class="btn-chief px-4 py-2 rounded-full text-white font-bold text-base shadow-lg transition-all ml-1">Chief of Office Staff</a>
             </div>
 
             <!-- Mobile menu button -->
@@ -250,9 +267,18 @@
                 <button id="mobileMenuBtn" class="text-white text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
             </div>
         </div>
-        <!-- mobile dropdown -->
+        <!-- mobile dropdown - UPDATED WITH WORKING LINKS -->
         <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 w-full glass-card rounded-b-2xl mt-1 p-4 flex flex-col gap-3 z-40">
-            <a href="#" class="nav-link text-white py-1">Home</a><a href="#" class="nav-link text-white/80">About</a><a href="#" class="nav-link text-white/80">Legislative Work</a><a href="#" class="nav-link text-white/80">Projects</a><a href="#" class="nav-link text-white/80">Foundation</a><a href="#" class="nav-link text-white/80">News</a><a href="#" class="nav-link text-white/80">Gallery</a><a href="#" class="nav-link text-white/80">Contact</a><a href="#" class="bg-red-700 text-center py-2 rounded-full font-bold mt-1">Request Service</a>
+            <a href="index.html" class="nav-link text-white py-1">Home</a>
+            <a href="about.html" class="nav-link text-white/80 py-1">About</a>
+            <a href="legislative.html" class="nav-link text-white/80 py-1">Legislative Work</a>
+            <a href="projects.html" class="nav-link text-white/80 py-1">Projects</a>
+            <a href="foundation.html" class="nav-link text-white/80 py-1">Foundation</a>
+            <a href="news.html" class="nav-link text-white/80 py-1">News</a>
+            <a href="gallery.html" class="nav-link text-white/80 py-1">Gallery</a>
+            <a href="contact.html" class="nav-link text-white/80 py-1">Contact</a>
+            <a href="request-service.html" class="bg-red-700 text-center py-2 rounded-full font-bold mt-1">Request Service</a>
+            <a href="chief-office.html" class="btn-chief text-center py-2 rounded-full font-bold mt-1">Chief of Office Staff</a>
         </div>
     </header>
 
@@ -264,8 +290,8 @@
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight"><span class="bg-gradient-to-r from-white via-red-300 to-blue-300 bg-clip-text text-transparent">Serving Nimba</span><br><span class="text-3xl md:text-5xl font-bold text-white">Building Liberia</span></h1>
                 <p class="max-w-2xl mx-auto mt-4 text-gray-200 text-base md:text-lg font-light">The official website of Honorable Senator Nya D. Twayen, Jr – a tireless advocate for the people of Nimba County, championing humanitarian welfare, rural development, education, healthcare and economic empowerment across the Republic of Liberia.</p>
                 <div class="flex flex-wrap gap-4 justify-center mt-8">
-                    <a href="#" class="btn-lib px-6 py-3 rounded-full text-white font-semibold flex items-center gap-2"><i class="fas fa-user-check"></i> Meet the Senator</a>
-                    <a href="#" class="bg-white/10 backdrop-blur-sm border border-white/30 px-6 py-3 rounded-full text-white font-semibold hover:bg-white/20 transition"><i class="fas fa-phone-alt"></i> Contact the Office</a>
+                    <a href="about.html" class="btn-lib px-6 py-3 rounded-full text-white font-semibold flex items-center gap-2"><i class="fas fa-user-check"></i> Meet the Senator</a>
+                    <a href="contact.html" class="bg-white/10 backdrop-blur-sm border border-white/30 px-6 py-3 rounded-full text-white font-semibold hover:bg-white/20 transition"><i class="fas fa-phone-alt"></i> Contact the Office</a>
                 </div>
             </div>
 
@@ -354,11 +380,11 @@
                     <i class="fas fa-seedling text-4xl text-blue-300 mb-3"></i>
                     <h3 class="text-2xl font-bold mb-2">Nya D. Twayen Foundation</h3>
                     <p class="text-gray-200">Providing scholarships, healthcare outreach, and small business grants. The foundation has empowered over 5,000 households across Nimba's 17 districts and continues its mission.</p>
-                    <a href="#" class="mt-4 text-red-300 hover:text-white transition flex items-center gap-2">Learn more <i class="fas fa-arrow-right"></i></a>
+                    <a href="foundation.html" class="mt-4 text-red-300 hover:text-white transition flex items-center gap-2">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             
-            <!-- NIMBA IMAGE SECTION - NOW USING nimba.jpg WITH PERFECT CIRCLE FIT (same as logo) -->
+            <!-- NIMBA IMAGE SECTION - USING nimba.jpg WITH PERFECT CIRCLE FIT -->
             <div class="glass-card p-6 flex flex-wrap gap-6 justify-between items-center mt-6">
                 <div class="flex items-center gap-4">
                     <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0 bg-white/10">
@@ -398,28 +424,10 @@
                 mobileMenu.classList.toggle('hidden');
             });
         }
-        // active nav highlight
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                if(this.getAttribute('href') === '#') e.preventDefault();
-                navLinks.forEach(l => l.classList.remove('active', 'text-white'));
-                navLinks.forEach(l => l.classList.add('text-white/80'));
-                this.classList.add('active', 'text-white');
-                if(this.innerText.trim() === 'Home') {
-                    window.scrollTo({top:0, behavior:'smooth'});
-                }
-            });
-        });
-        const homeLink = Array.from(navLinks).find(l => l.innerText.trim() === 'Home');
-        if(homeLink) {
-            homeLink.classList.add('active', 'text-white');
-        }
-
+        
         // ----- ROTATING SENATOR IMAGE (every 2 seconds) - FULL 8 IMAGE ROTATION -----
         const rotatingImg = document.getElementById('rotatingSenatorImage');
         if (rotatingImg) {
-            // Complete image rotation list: portrait + nya series + 4 PNG images
             const imageList = [
                 'images/senator-portrait.jpg',
                 'images/nya.jpg',
@@ -432,7 +440,6 @@
             ];
             let currentIndex = 0;
             
-            // Preload all images for smoother transitions
             const preloadImages = () => {
                 imageList.forEach(src => {
                     const img = new Image();
@@ -441,7 +448,6 @@
             };
             preloadImages();
             
-            // Change image every 2 seconds with smooth fade effect
             setInterval(() => {
                 currentIndex = (currentIndex + 1) % imageList.length;
                 rotatingImg.style.opacity = '0.4';
