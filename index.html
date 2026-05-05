@@ -8,9 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom overrides for glass + rich animations & Liberia colors -->
     <style>
-        /* tailwind directives simulation + custom advanced glass */
+        /* ===== CUSTOM ADVANCED GLASS + LIBERIA COLORS ===== */
         * {
             margin: 0;
             padding: 0;
@@ -25,7 +24,7 @@
             scroll-behavior: smooth;
         }
 
-        /* animated bg with subtle flag flow (red, white, blue accents) */
+        /* animated bg with flag flow (red, white, blue) */
         .bg-flag-aura {
             position: fixed;
             top: 0;
@@ -52,7 +51,7 @@
             100% { transform: translate(-5%, -8%) rotate(2deg); }
         }
 
-        /* Glassmorphism master classes */
+        /* Glassmorphism core */
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(14px);
@@ -97,11 +96,6 @@
             color: transparent;
         }
 
-        .text-gold-white {
-            color: #F9F6EE;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
         .nav-link {
             position: relative;
             font-weight: 500;
@@ -123,13 +117,6 @@
             width: 100%;
         }
 
-        .section-title {
-            border-left: 5px solid #BF0D3E;
-            padding-left: 1rem;
-            font-weight: 700;
-        }
-
-        /* image frame with elegant border */
         .senator-frame {
             border-radius: 2rem;
             box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
@@ -142,7 +129,6 @@
             border-color: #BF0D3E;
         }
 
-        /* responsive fixes */
         @media (max-width: 1024px) {
             .glass-nav .flex-wrap {
                 justify-content: center;
@@ -155,9 +141,6 @@
         .animate-fade-up {
             animation: fadeUp 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
         }
-        .hero-grid {
-            animation-delay: 0.1s;
-        }
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -168,19 +151,25 @@
             background: #BF0D3E;
             border-radius: 10px;
         }
+        .hero-image-full {
+            transition: transform 0.4s ease, box-shadow 0.3s;
+        }
+        .hero-image-full:hover {
+            transform: scale(1.01);
+            box-shadow: 0 30px 45px -15px rgba(0,0,0,0.6);
+        }
     </style>
 </head>
 <body class="antialiased">
     <div class="bg-flag-aura"></div>
 
-    <!-- Navigation Bar - glass effect with red, white & blue accent -->
+    <!-- ========== GLASS NAVIGATION ========== -->
     <header class="glass-nav fixed top-0 left-0 w-full z-50 px-5 md:px-12 py-3 transition-all">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-            <!-- left section: senator image + republic + name -->
+            <!-- left section: senator image (senator-main.jpg) + republic + name -->
             <div class="flex items-center gap-4">
                 <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center shadow-md">
-                    <!-- senator placeholder image with liberia flag nuance, replace later with actual senator image -->
-                    <img src="https://placehold.co/400x400/1E2A47/white?text=Senator+Nya" alt="Senator Nya D. Twayen, Jr" class="w-full h-full object-cover">
+                    <img src="images/senator-main.jpg" alt="Senator Nya D. Twayen, Jr" class="w-full h-full object-cover">
                 </div>
                 <div>
                     <div class="text-sm md:text-base font-semibold tracking-wide text-white/90">Republic of Liberia</div>
@@ -189,7 +178,7 @@
                 </div>
             </div>
 
-            <!-- Desktop navigation links (with highlight Home and Request Service bigger) -->
+            <!-- Desktop navigation -->
             <div class="hidden lg:flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
                 <a href="#" class="nav-link active text-white">Home</a>
                 <a href="#" class="nav-link text-white/80 hover:text-white">About</a>
@@ -202,7 +191,7 @@
                 <a href="#" class="bg-red-700/60 hover:bg-red-700 px-4 py-2 rounded-full text-white font-bold text-base shadow-lg transition-all ml-1 border border-white/20">Request Service</a>
             </div>
 
-            <!-- Mobile menu button (simple responsive) + minimal dropdown actually would be extended, keeping functional design -->
+            <!-- Mobile menu button -->
             <div class="lg:hidden">
                 <button id="mobileMenuBtn" class="text-white text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
             </div>
@@ -214,9 +203,8 @@
     </header>
 
     <main class="pt-32 md:pt-36 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
-        <!-- HERO SECTION: Home default -->
         <div class="animate-fade-up">
-            <!-- Senator Title / Intro -->
+            <!-- Title & Intro -->
             <div class="text-center mb-12">
                 <div class="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm text-red-200 text-sm font-medium mb-3 border border-white/20">Nimba County • 55th Legislature</div>
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight"><span class="bg-gradient-to-r from-white via-red-300 to-blue-300 bg-clip-text text-transparent">Serving Nimba</span><br><span class="text-3xl md:text-5xl font-bold text-white">Building Liberia</span></h1>
@@ -227,7 +215,7 @@
                 </div>
             </div>
 
-            <!-- Stats cards: 17 Districts, 50+ Projects, 100K+ Lives -->
+            <!-- Stats Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 my-16">
                 <div class="glass-card p-6 text-center transform transition-all duration-300 hover:scale-105">
                     <i class="fas fa-map-marked-alt text-4xl text-red-400 mb-3"></i>
@@ -249,11 +237,11 @@
                 </div>
             </div>
 
-            <!-- Big Senator Image with name frame -->
+            <!-- Big Senator Image (using senator-portrait.jpg) -->
             <div class="glass-card p-5 md:p-8 my-12 flex flex-col md:flex-row gap-10 items-center justify-center">
                 <div class="flex-shrink-0 w-full md:w-2/5">
                     <div class="relative">
-                        <img src="https://placehold.co/800x900/142c3c/white?text=Senator+Nya+D.+Twayen+Jr" alt="Honorable Senator Nya D. Twayen, Jr" class="senator-frame w-full object-cover rounded-2xl shadow-2xl">
+                        <img src="images/senator-portrait.jpg" alt="Honorable Senator Nya D. Twayen, Jr" class="senator-frame w-full object-cover rounded-2xl shadow-2xl">
                         <div class="absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-black/70 backdrop-blur-md px-6 py-2 rounded-full border border-red-500/50 whitespace-nowrap text-sm md:text-base font-bold text-white">Honorable Nya D. Twayen, Jr <span class="text-red-300">| Senator, Nimba County</span></div>
                     </div>
                 </div>
@@ -268,7 +256,7 @@
                 </div>
             </div>
 
-            <!-- Info grid: Policy Focus / Public service + additional card section similar to design brief -->
+            <!-- Info grid: Senator, Foundation Chair, Policy Focus, Public Service -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
                 <div class="glass-card p-6 text-center group">
                     <div class="w-16 h-16 mx-auto rounded-full bg-red-900/40 flex items-center justify-center mb-4 border border-red-500/30"><i class="fas fa-university text-3xl text-white"></i></div>
@@ -292,7 +280,15 @@
                 </div>
             </div>
 
-            <!-- Additional Section to align with Senator focus: Highlights on Projects and Foundation preview -->
+            <!-- ========== BIG HERO IMAGE (senator8.jpg) inserted right between the info grid and the next section ========= -->
+            <div class="my-16 w-full">
+                <div class="glass-card p-3 md:p-5 overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 hover:shadow-red-900/20">
+                    <img src="images/senator8.jpg" alt="Senator Nya D. Twayen, Jr - Leadership in Action" class="w-full h-auto object-cover rounded-xl hero-image-full">
+                    <div class="text-center mt-4 text-white/70 text-sm italic">Hon. Senator Nya D. Twayen, Jr. engaging with community leaders — building a stronger Nimba.</div>
+                </div>
+            </div>
+
+            <!-- Legislative Milestones & Nya D. Twayen Foundation (remains identical but enhanced) -->
             <div class="my-16 grid md:grid-cols-2 gap-8">
                 <div class="glass-card p-6 flex flex-col">
                     <i class="fas fa-chalkboard-teacher text-4xl text-red-400 mb-3"></i>
@@ -308,10 +304,10 @@
                 </div>
             </div>
             
-            <!-- additional card to showcase latest news/home feel - connecting the image from brief -->
+            <!-- additional card with liberia flag image (updated) and news -->
             <div class="glass-card p-6 flex flex-wrap gap-6 justify-between items-center mt-6">
                 <div class="flex items-center gap-4">
-                    <img src="https://placehold.co/120x120/003366/white?text=Liberia+Flag" class="w-16 h-16 rounded-full object-cover border-2 border-white" alt="Flag pride">
+                    <img src="images/liberia-flag.png" class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md" alt="Liberian Flag">
                     <div><p class="font-semibold">"One Nimba, One Future"</p><p class="text-sm text-gray-300">Senator Twayen's message of unity and progress resonates across the county.</p></div>
                 </div>
                 <div class="text-right">
@@ -321,7 +317,7 @@
         </div>
     </main>
 
-    <!-- Footer with elegant glass & liberia colors -->
+    <!-- Footer with glass & liberian touch -->
     <footer class="glass-card rounded-t-3xl mt-10 py-8 px-5 mx-4 md:mx-8 border-t border-white/20">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
@@ -346,7 +342,7 @@
                 mobileMenu.classList.toggle('hidden');
             });
         }
-        // active nav highlight simulation (simple, no routing)
+        // active nav highlight
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -354,15 +350,11 @@
                 navLinks.forEach(l => l.classList.remove('active', 'text-white'));
                 navLinks.forEach(l => l.classList.add('text-white/80'));
                 this.classList.add('active', 'text-white');
-                if(this.innerText.trim() !== 'Home') {
-                    // visual feedback, just staying on same page but Home remains active? we keep as requested but home page always content.
-                }
                 if(this.innerText.trim() === 'Home') {
                     window.scrollTo({top:0, behavior:'smooth'});
                 }
             });
         });
-        // make first Home active on load
         const homeLink = Array.from(navLinks).find(l => l.innerText.trim() === 'Home');
         if(homeLink) {
             homeLink.classList.add('active', 'text-white');
