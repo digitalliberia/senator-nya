@@ -100,6 +100,7 @@
             position: relative;
             font-weight: 500;
             transition: 0.2s;
+            text-decoration: none;
         }
 
         .nav-link::after {
@@ -143,7 +144,7 @@
             animation: heartbeat 1.8s ease-in-out infinite;
         }
 
-        /* PERFECT CIRCLE IMAGE FIX - Same styling for both logo and nimba image */
+        /* PERFECT CIRCLE IMAGE FIX */
         .circle-image {
             width: 100%;
             height: 100%;
@@ -154,24 +155,6 @@
         /* Specific adjustment for senator logo to show face properly */
         .senator-logo {
             object-position: center 25%;
-        }
-        
-        /* Nimba image uses exact same styling as logo container */
-        .nimba-circle {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .nimba-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
         }
 
         /* Ensure rounded containers clip images properly */
@@ -246,7 +229,7 @@
                 </div>
             </div>
 
-            <!-- Desktop navigation - ALL LINKS NOW WORKING with proper page links -->
+            <!-- Desktop navigation - ALL LINKS WORKING with proper page links -->
             <div class="hidden lg:flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
                 <a href="index.html" class="nav-link active text-white">Home</a>
                 <a href="about.html" class="nav-link text-white/80 hover:text-white">About</a>
@@ -267,17 +250,17 @@
                 <button id="mobileMenuBtn" class="text-white text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
             </div>
         </div>
-        <!-- mobile dropdown - UPDATED WITH WORKING LINKS -->
+        <!-- mobile dropdown - WORKING LINKS -->
         <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 w-full glass-card rounded-b-2xl mt-1 p-4 flex flex-col gap-3 z-40">
-            <a href="index.html" class="nav-link text-white py-1">Home</a>
-            <a href="about.html" class="nav-link text-white/80 py-1">About</a>
-            <a href="legislative.html" class="nav-link text-white/80 py-1">Legislative Work</a>
-            <a href="projects.html" class="nav-link text-white/80 py-1">Projects</a>
-            <a href="foundation.html" class="nav-link text-white/80 py-1">Foundation</a>
-            <a href="news.html" class="nav-link text-white/80 py-1">News</a>
-            <a href="gallery.html" class="nav-link text-white/80 py-1">Gallery</a>
-            <a href="contact.html" class="nav-link text-white/80 py-1">Contact</a>
-            <a href="request-service.html" class="bg-red-700 text-center py-2 rounded-full font-bold mt-1">Request Service</a>
+            <a href="index.html" class="text-white py-1 hover:text-red-300 transition">Home</a>
+            <a href="about.html" class="text-white/80 py-1 hover:text-red-300 transition">About</a>
+            <a href="legislative.html" class="text-white/80 py-1 hover:text-red-300 transition">Legislative Work</a>
+            <a href="projects.html" class="text-white/80 py-1 hover:text-red-300 transition">Projects</a>
+            <a href="foundation.html" class="text-white/80 py-1 hover:text-red-300 transition">Foundation</a>
+            <a href="news.html" class="text-white/80 py-1 hover:text-red-300 transition">News</a>
+            <a href="gallery.html" class="text-white/80 py-1 hover:text-red-300 transition">Gallery</a>
+            <a href="contact.html" class="text-white/80 py-1 hover:text-red-300 transition">Contact</a>
+            <a href="request-service.html" class="bg-red-700 text-center py-2 rounded-full font-bold mt-1 hover:bg-red-600 transition">Request Service</a>
             <a href="chief-office.html" class="btn-chief text-center py-2 rounded-full font-bold mt-1">Chief of Office Staff</a>
         </div>
     </header>
