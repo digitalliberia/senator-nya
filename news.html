@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>News & Updates | Senator Nya D. Twayen, Jr. | Nimba County</title>
+    <!-- Google Fonts + Tailwind + Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at 10% 20%, rgba(10,20,35,0.9), rgba(2,8,23,0.95)); color: #f0f4fa; overflow-x: hidden; scroll-behavior: smooth; }
+        .bg-flag-aura { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; background: linear-gradient(125deg, #0a1a2f 0%, #04122b 45%, #80000030 70%, #00286830 100%); }
+        .bg-flag-aura::before { content: ""; position: absolute; width: 200%; height: 200%; top: -50%; left: -50%; background: radial-gradient(circle, rgba(191,13,62,0.08) 0%, rgba(0,40,104,0.12) 60%, transparent 80%); animation: slowDrift 28s infinite alternate; }
+        @keyframes slowDrift { 0% { transform: translate(0%,0%) rotate(0deg); } 100% { transform: translate(-5%,-8%) rotate(2deg); } }
+        .glass-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.15); border-radius: 2rem; box-shadow: 0 20px 40px -12px rgba(0,0,0,0.4); transition: all 0.3s ease; }
+        .glass-card:hover { border-color: rgba(255,70,85,0.4); box-shadow: 0 25px 45px -12px rgba(220,20,60,0.2); background: rgba(255,255,255,0.08); }
+        .glass-nav { background: rgba(5,15,35,0.55); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(255,255,255,0.12); border-radius: 0 0 2rem 2rem; position: fixed; top: 0; left: 0; width: 100%; z-index: 50; padding: 0.75rem 2rem; }
+        .btn-lib { background: linear-gradient(95deg, #BF0D3E, #002868); transition: transform 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.2); display: inline-block; }
+        .btn-lib:hover { transform: translateY(-3px); }
+        .btn-chief { background: linear-gradient(95deg, #1E3A6F, #0F2B4F); border: 1px solid rgba(255,215,0,0.4); transition: transform 0.2s; }
+        .btn-chief:hover { transform: translateY(-3px); background: linear-gradient(95deg, #2A4A8A, #1A3A6A); border-color: rgba(255,215,0,0.7); }
+        .nav-link { position: relative; font-weight: 500; transition: 0.2s; text-decoration: none; color: rgba(255,255,255,0.8); }
+        .nav-link:hover { color: white; }
+        .nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0%; height: 2px; background: #BF0D3E; transition: 0.25s ease; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link.active { color: white; }
+        .circle-image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+        .senator-logo { object-position: center 25%; }
+        @keyframes fadeUp { 0% { opacity: 0; transform: translateY(25px); } 100% { opacity: 1; transform: translateY(0); } }
+        .animate-fade-up { animation: fadeUp 0.7s cubic-bezier(0.2,0.9,0.4,1.1) forwards; }
+        main { padding-top: 100px; }
+        .news-category { font-size: 0.7rem; padding: 0.25rem 0.75rem; border-radius: 9999px; display: inline-block; }
+        .category-press { background: rgba(59,130,246,0.2); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+        .category-townhall { background: rgba(34,197,94,0.2); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+        .category-legislation { background: rgba(191,13,62,0.2); color: #f87171; border: 1px solid rgba(191,13,62,0.3); }
+        .category-community { background: rgba(245,158,11,0.2); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+        @media (max-width: 1024px) { .glass-nav .flex-wrap { justify-content: center; } main { padding-top: 120px; } }
+    </style>
+</head>
+<body>
+    <div class="bg-flag-aura"></div>
+
+    <!-- GLASS NAVIGATION -->
+    <header class="glass-nav">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white/30 bg-white/10 shadow-md">
+                    <img src="images/senator-main.jpg" alt="Senator" class="circle-image senator-logo">
+                </div>
+                <div>
+                    <div class="text-sm md:text-base font-semibold text-white/90">Republic of Liberia</div>
+                    <div class="text-sm md:text-lg font-bold text-white">Senator Nya D. Twayen, Jr</div>
+                    <div class="text-xs text-red-300">Nimba County • 55th Legislature</div>
+                </div>
+            </div>
+            <div class="hidden lg:flex flex-wrap items-center gap-x-4 text-sm font-medium">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="legislative.html" class="nav-link">Legislative Work</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="foundation.html" class="nav-link">Foundation</a>
+                <a href="news.html" class="nav-link active">News</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="request-service.html" class="bg-red-700/60 hover:bg-red-700 px-4 py-2 rounded-full text-white font-bold transition">Request Service</a>
+                <a href="chief-office.html" class="btn-chief px-4 py-2 rounded-full text-white font-bold transition">Chief of Office Staff</a>
+            </div>
+            <div class="lg:hidden"><button id="mobileMenuBtn" class="text-white text-2xl"><i class="fas fa-bars"></i></button></div>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 w-full glass-card rounded-b-2xl mt-1 p-4 flex flex-col gap-3 z-40">
+            <a href="index.html" class="text-white py-1">Home</a>
+            <a href="about.html" class="text-white/80 py-1">About</a>
+            <a href="legislative.html" class="text-white/80 py-1">Legislative Work</a>
+            <a href="projects.html" class="text-white/80 py-1">Projects</a>
+            <a href="foundation.html" class="text-white/80 py-1">Foundation</a>
+            <a href="news.html" class="text-white py-1">News</a>
+            <a href="gallery.html" class="text-white/80 py-1">Gallery</a>
+            <a href="contact.html" class="text-white/80 py-1">Contact</a>
+            <a href="request-service.html" class="bg-red-700 text-center py-2 rounded-full font-bold mt-1">Request Service</a>
+            <a href="chief-office.html" class="btn-chief text-center py-2 rounded-full font-bold mt-1">Chief of Office Staff</a>
+        </div>
+    </header>
+
+    <main class="px-4 md:px-8 max-w-7xl mx-auto">
+        <div class="animate-fade-up">
+            <!-- Header Section -->
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-1 rounded-full bg-white/10 text-red-200 text-sm mb-3">Latest from the Office</div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-4"><span class="bg-gradient-to-r from-white via-red-300 to-blue-300 bg-clip-text text-transparent">News & Updates</span></h1>
+                <p class="max-w-3xl mx-auto text-gray-300 text-lg">Stay informed about Senator Twayen's work, community engagements, and legislative progress in Nimba County.</p>
+            </div>
+
+            <!-- Featured / Latest News Cards -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Latest News Item 1 -->
+                <div class="glass-card p-6 md:p-8 transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex justify-between items-start flex-wrap gap-2 mb-3">
+                        <span class="news-category category-press"><i class="fas fa-newspaper mr-1"></i> Press Release</span>
+                        <span class="text-sm text-gray-400"><i class="far fa-calendar-alt mr-1"></i> Apr 28, 2026</span>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-3">Senator Twayen Donates Medical Supplies to Ganta United Methodist Hospital</h2>
+                    <p class="text-gray-300 mb-4">Essential medicines and equipment delivered to strengthen healthcare in Nimba, benefiting thousands of residents across the county.</p>
+                    <div class="flex items-center justify-between flex-wrap gap-3">
+                        <div class="flex items-center gap-2 text-sm text-gray-400"><i class="fas fa-tag"></i> Healthcare | Medical Relief</div>
+                        <a href="#" class="text-red-400 hover:text-red-300 transition flex items-center gap-1">Read more <i class="fas fa-arrow-right text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Latest News Item 2 -->
+                <div class="glass-card p-6 md:p-8 transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex justify-between items-start flex-wrap gap-2 mb-3">
+                        <span class="news-category category-townhall"><i class="fas fa-users mr-1"></i> Town Hall</span>
+                        <span class="text-sm text-gray-400"><i class="far fa-calendar-alt mr-1"></i> Apr 19, 2026</span>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-3">Engaging the People: District Town Hall Brings Hundreds Together</h2>
+                    <p class="text-gray-300 mb-4">Citizens shared concerns on roads, schools, and agriculture during a vibrant town hall in Saclepea District.</p>
+                    <div class="flex items-center justify-between flex-wrap gap-3">
+                        <div class="flex items-center gap-2 text-sm text-gray-400"><i class="fas fa-tag"></i> Community Engagement | Town Hall</div>
+                        <a href="#" class="text-red-400 hover:text-red-300 transition flex items-center gap-1">Read more <i class="fas fa-arrow-right text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Grid - Remaining Articles -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- News Item 3 -->
+                <div class="glass-card p-6 transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex justify-between items-start flex-wrap gap-2 mb-3">
+                        <span class="news-category category-legislation"><i class="fas fa-gavel mr-1"></i> Legislation</span>
+                        <span class="text-sm text-gray-400"><i class="far fa-calendar-alt mr-1"></i> Apr 10, 2026</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Education Empowerment Act Advances in the Senate</h3>
+                    <p class="text-gray-300 mb-3">Bill championed by Senator Twayen moves forward after committee hearing, paving the way for expanded educational resources across Nimba.</p>
+                    <div class="flex items-center justify-between flex-wrap gap-3 mt-3">
+                        <div class="flex items-center gap-2 text-sm text-gray-400"><i class="fas fa-tag"></i> Education | Legislative</div>
+                        <a href="#" class="text-red-400 hover:text-red-300 transition text-sm flex items-center gap-1">Read more <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="glass-card p-6 transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex justify-between items-start flex-wrap gap-2 mb-3">
+                        <span class="news-category category-community"><i class="fas fa-drumstick-bite mr-1"></i> Community</span>
+                        <span class="text-sm text-gray-400"><i class="far fa-calendar-alt mr-1"></i> Mar 30, 2026</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Cultural Day: Honoring Nimba Traditional Leaders</h3>
+                    <p class="text-gray-300 mb-3">Celebration of heritage and unity brought elders, youth, and the diaspora together to honor Nimba's rich cultural traditions.</p>
+                    <div class="flex items-center justify-between flex-wrap gap-3 mt-3">
+                        <div class="flex items-center gap-2 text-sm text-gray-400"><i class="fas fa-tag"></i> Culture | Heritage</div>
+                        <a href="#" class="text-red-400 hover:text-red-300 transition text-sm flex items-center gap-1">Read more <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup / Stay Connected -->
+            <div class="glass-card p-8 text-center">
+                <i class="fas fa-envelope-open-text text-4xl text-red-400 mb-4"></i>
+                <h2 class="text-2xl font-bold mb-3">Stay Connected</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto mb-6">Subscribe to receive the latest news, press releases, and updates directly from the office of Senator Nya D. Twayen, Jr.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+                    <input type="email" placeholder="Your email address" class="bg-white/10 border border-white/20 rounded-full px-6 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-red-500 transition flex-1">
+                    <a href="#" class="btn-lib px-6 py-3 rounded-full text-white font-semibold inline-flex items-center justify-center gap-2"><i class="fas fa-paper-plane"></i> Subscribe</a>
+                </div>
+                <p class="text-xs text-gray-500 mt-4">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+
+            <!-- Office Admin Link -->
+            <div class="text-center mt-8">
+                <a href="#" class="inline-flex items-center gap-2 text-gray-300 hover:text-red-400 transition text-sm"><i class="fas fa-user-tie mr-1"></i> Office Admin →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card rounded-t-3xl mt-10 py-8 px-5 text-center">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-red-700 flex items-center justify-center text-white font-bold">NT</div><div class="text-sm">© 2025 Office of Senator Nya D. Twayen, Jr.<br>Republic of Liberia – Nimba County</div></div>
+            <div class="flex gap-6"><a href="https://www.facebook.com/share/1PZNyYNKti/" target="_blank" class="hover:text-red-400"><i class="fab fa-facebook-f text-xl"></i></a><a href="#" class="hover:text-red-400"><i class="fab fa-twitter text-xl"></i></a><a href="https://www.instagram.com/nyatwayen" target="_blank" class="hover:text-red-400"><i class="fab fa-instagram text-xl"></i></a></div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if(mobileBtn) mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>
